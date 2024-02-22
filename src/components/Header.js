@@ -1,37 +1,35 @@
 import styled from "styled-components";
 
 const Wrap = styled.div`
-  text-align: center;
-  line-height: 300px;
+  padding: 30px 5%;
+  border: 1px solid black;
+  border-radius: 10px;
+`;
+// css
+// 속성값을 지정해주는 역할을 함.
+
+const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: 30px;
 `;
-//css
-
-const Box1 = styled.div`
-  background-color: beige;
-  width: 200px;
-  height: 200px;
+const Logo = styled.div`
+  font-weight: 700;
 `;
-const Box2 = styled.div`
-  background-color: crimson;
-  width: 200px;
-  height: 200px;
-`;
-const Box3 = styled.div`
-  background-color: orange;
-  width: 200px;
-  height: 200px;
+const Menu = styled.button`
+  border: 1px solid pink;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: lightblue;
 `;
 
 export const Header = () => {
   return (
     <Wrap>
-      {/* 부모 */}
-      <Box1>1</Box1>
-      {/* 자식 */}
-      <Box2>2</Box2>
-      <Box3>3</Box3>
+      <Container>
+        <Logo>Logo</Logo>
+        <Menu>버튼</Menu>
+      </Container>
     </Wrap>
   );
 };
