@@ -27,7 +27,7 @@ export const Header = () => {
   return (
     <Wrap>
       <Container>
-        <Logo>Logo</Logo>
+        <Logo>JTube</Logo>
         <Menu>버튼</Menu>
       </Container>
     </Wrap>

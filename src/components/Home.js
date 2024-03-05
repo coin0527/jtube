@@ -13,6 +13,5 @@ export const Home = () => {
       <Header />
       <Section1 />
     </Wrap>
-    // 헤더 제작
   );
 };
