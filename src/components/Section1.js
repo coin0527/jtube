@@ -25,7 +25,6 @@ export const Section1 = () => {
       <Container>
         <Box1 />
         <Box1 />
-        <Box1 />
       </Container>
     </Wrap>
   );
