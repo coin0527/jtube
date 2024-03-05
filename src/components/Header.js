@@ -33,7 +33,7 @@ const InputWrapper = styled.div`
 `;
 
 const Input = styled.input`
-  width: 100%;
+  width: 500px;
   height: 30px;
   border-radius: 25px;
   padding-right: 40px;
@@ -61,9 +61,9 @@ const Semi3 = styled.div`
   display: flex;
 `;
 
-const Create = styled.div``;
-const Alam = styled.div``;
-const User = styled.div``;
+const Create = styled.button``;
+const Alam = styled.button``;
+const User = styled.button``;
 
 export const Header = () => {
   return (
