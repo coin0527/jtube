@@ -1,6 +1,6 @@
 import { Home } from "./components/Home";
 
-export const App = () => {
+export const Router = () => {
   return (
     <div>
       <Home />
