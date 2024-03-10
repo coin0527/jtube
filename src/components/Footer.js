@@ -86,7 +86,7 @@ export const Footer = () => {
           >
             <FontAwesomeIcon
               icon={faInstagram}
-              style={{ fontSize: "80px", color: "snow" }}
+              style={{ fontSize: "80px", color: "white" }}
             />
           </div>
           <div
