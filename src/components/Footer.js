@@ -33,7 +33,6 @@ export const Footer = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
           officia, libero cumque natus nobis nam voluptatibus quam unde
           perspiciatis ab quasi blanditiis voluptatem, aspernatur consectetur
-          possimus provident inventore perferendis temporibus?
         </Introduce>
       </Container>
     </Wrap>
