@@ -8,7 +8,6 @@ const Container = styled.div`
   display: flex;
 `;
 const Logo = styled.div`
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,16 +22,30 @@ const Introduce = styled.div`
   align-items: center;
 `;
 
+const Con = styled.div`
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+const Imagebox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Footer = () => {
   return (
     <Wrap>
       <Container>
-        <Logo>123</Logo>
+        <Con>
+          <Logo>logo</Logo>
+          <Imagebox>Image</Imagebox>
+        </Con>
         <Bar />
         <Introduce>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
           officia, libero cumque natus nobis nam voluptatibus quam unde
-          perspiciatis ab quasi blanditiis voluptatem, aspernatur consectetur
         </Introduce>
       </Container>
     </Wrap>
