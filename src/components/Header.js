@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   faBell,
   faSquarePlus,
@@ -36,6 +37,7 @@ const Input = styled.input`
   height: 30px;
   border-radius: 25px;
   padding-right: 40px;
+  padding-left: 20px;
 `;
 
 const Semi2 = styled.div`
@@ -50,6 +52,12 @@ const Semi3 = styled.div`
 `;
 
 export const Header = () => {
+  const [searchText, setSearchText] = useState("");
+
+  const handleInputChange = (event) => {
+    setSearchText(event.target.value);
+  };
+
   return (
     <Wrap>
       <Container>
@@ -62,10 +70,19 @@ export const Header = () => {
               cursor: "pointer",
             }}
           />
-          <Logo src={JTubeLogo} alt="JTube Logo" />
+          <Logo
+            src={JTubeLogo}
+            alt="JTube Logo"
+            style={{ cursor: "pointer" }}
+          />
         </Semi>
         <Semi2>
-          <Input />
+          <Input
+            type="text"
+            value={searchText}
+            onChange={handleInputChange}
+            placeholder="Please enter a search term"
+          />
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
             style={{
