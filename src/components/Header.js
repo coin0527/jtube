@@ -1,3 +1,10 @@
+import {
+  faBell,
+  faSquarePlus,
+  faUser,
+} from "@fortawesome/free-regular-svg-icons";
+import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 const Wrap = styled.div`
@@ -15,14 +22,6 @@ const Logo = styled.div`
   font-weight: 700;
 `;
 
-const Menu = styled.button`
-  border: 1px solid pink;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: lightblue;
-  margin-right: 20px;
-`;
-
 const Semi = styled.div`
   display: flex;
   align-items: center;
@@ -33,23 +32,23 @@ const InputWrapper = styled.div`
 `;
 
 const Input = styled.input`
-  width: 500px;
+  width: calc(50vw - 150px);
+  max-width: 650px;
   height: 30px;
   border-radius: 25px;
   padding-right: 40px;
-`;
 
-const SearchButton = styled.button`
-  /* 검색 버튼에 대한 스타일링 */
-  position: absolute; /* 추가: 절대적 위치 설정 */
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  border: none;
-  background-color: lightgray;
-  border-radius: 50%;
-  cursor: pointer;
+  @media screen and (max-width: 1200px) {
+    width: calc(40vw - 150px);
+  }
+
+  @media screen and (max-width: 800px) {
+    width: calc(30vw - 150px);
+  }
+
+  @media screen and (max-width: 600px) {
+    width: calc(80vw - 150px);
+  }
 `;
 
 const Semi2 = styled.div`
@@ -60,29 +59,67 @@ const Semi2 = styled.div`
 const Semi3 = styled.div`
   display: flex;
 `;
-
-const Create = styled.button``;
-const Alam = styled.button``;
-const User = styled.button``;
-
 export const Header = () => {
   return (
     <Wrap>
       <Container>
         <Semi>
-          <Menu>메뉴</Menu>
+          <FontAwesomeIcon
+            icon={faBars}
+            style={{
+              marginRight: "30px",
+              fontSize: "24px",
+              marginTop: "10px",
+            }}
+          />
           <Logo>JTube</Logo>
         </Semi>
         <Semi2>
           <InputWrapper>
             <Input />
-            <SearchButton>검색</SearchButton>
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              style={{
+                color: "#333",
+                marginLeft: "10px",
+                cursor: "pointer",
+                fontSize: "24px",
+                marginTop: "10px",
+              }}
+            />
           </InputWrapper>
         </Semi2>
         <Semi3>
-          <Create>1</Create>
-          <Alam>2</Alam>
-          <User>3</User>
+          <FontAwesomeIcon
+            icon={faSquarePlus}
+            style={{
+              marginRight: "15px",
+              color: "#333",
+              fontSize: "24px",
+              cursor: "pointer",
+              marginTop: "10px",
+            }}
+          />
+          <FontAwesomeIcon
+            icon={faBell}
+            style={{
+              marginRight: "15px",
+              color: "#333",
+              fontSize: "24px",
+              cursor: "pointer",
+              marginTop: "10px",
+            }}
+          />
+          <FontAwesomeIcon
+            icon={faUser}
+            style={{
+              marginRight: "15px",
+              color: "#333",
+              fontSize: "24px",
+              cursor: "pointer",
+              marginTop: "10px",
+            }}
+          />
         </Semi3>
       </Container>
     </Wrap>
