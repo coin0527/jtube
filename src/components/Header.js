@@ -6,6 +6,7 @@ import {
 import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import JTubeLogo from "../Img/Jtube_01.png";
 
 const Wrap = styled.div`
   padding: 15px 3%;
@@ -18,17 +19,15 @@ const Container = styled.div`
   font-size: 30px;
 `;
 
-const Logo = styled.div`
+const Logo = styled.img`
   font-weight: 700;
+  height: 35px;
 `;
 
 const Semi = styled.div`
   display: flex;
   align-items: center;
-`;
-
-const InputWrapper = styled.div`
-  position: relative;
+  height: 30px;
 `;
 
 const Input = styled.input`
@@ -37,28 +36,19 @@ const Input = styled.input`
   height: 30px;
   border-radius: 25px;
   padding-right: 40px;
-
-  @media screen and (max-width: 1200px) {
-    width: calc(40vw - 150px);
-  }
-
-  @media screen and (max-width: 800px) {
-    width: calc(30vw - 150px);
-  }
-
-  @media screen and (max-width: 600px) {
-    width: calc(80vw - 150px);
-  }
 `;
 
 const Semi2 = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  height: 30px;
 `;
 
 const Semi3 = styled.div`
   display: flex;
+  height: 30px;
 `;
+
 export const Header = () => {
   return (
     <Wrap>
@@ -69,25 +59,22 @@ export const Header = () => {
             style={{
               marginRight: "30px",
               fontSize: "24px",
-              marginTop: "10px",
+              cursor: "pointer",
             }}
           />
-          <Logo>JTube</Logo>
+          <Logo src={JTubeLogo} alt="JTube Logo" />
         </Semi>
         <Semi2>
-          <InputWrapper>
-            <Input />
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              style={{
-                color: "#333",
-                marginLeft: "10px",
-                cursor: "pointer",
-                fontSize: "24px",
-                marginTop: "10px",
-              }}
-            />
-          </InputWrapper>
+          <Input />
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            style={{
+              color: "#333",
+              marginLeft: "10px",
+              cursor: "pointer",
+              fontSize: "24px",
+            }}
+          />
         </Semi2>
         <Semi3>
           <FontAwesomeIcon
@@ -97,7 +84,6 @@ export const Header = () => {
               color: "#333",
               fontSize: "24px",
               cursor: "pointer",
-              marginTop: "10px",
             }}
           />
           <FontAwesomeIcon
@@ -107,7 +93,6 @@ export const Header = () => {
               color: "#333",
               fontSize: "24px",
               cursor: "pointer",
-              marginTop: "10px",
             }}
           />
           <FontAwesomeIcon
@@ -117,7 +102,6 @@ export const Header = () => {
               color: "#333",
               fontSize: "24px",
               cursor: "pointer",
-              marginTop: "10px",
             }}
           />
         </Semi3>
