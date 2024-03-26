@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import {
-  faBell,
-  faSquarePlus,
-  faUser,
-} from "@fortawesome/free-regular-svg-icons";
+import styled, { css, keyframes } from "styled-components";
 import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styled from "styled-components";
 import JTubeLogo from "../Img/Jtube_01.png";
 
 const Wrap = styled.div`
@@ -46,16 +41,50 @@ const Semi2 = styled.div`
   height: 30px;
 `;
 
-const Semi3 = styled.div`
-  display: flex;
-  height: 30px;
+const slideInMenu = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+`;
+
+const slideOutMenu = keyframes`
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+`;
+
+const Menu = styled.div`
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  ${({ isOpen }) =>
+    isOpen
+      ? css`
+          animation-name: ${slideInMenu};
+        `
+      : css`
+          animation-name: ${slideOutMenu};
+        `}
 `;
 
 export const Header = () => {
-  const [searchText, setSearchText] = useState("");
+  const [showMenu, setShowMenu] = useState(false);
 
-  const handleInputChange = (event) => {
-    setSearchText(event.target.value);
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
   return (
@@ -69,6 +98,7 @@ export const Header = () => {
               fontSize: "24px",
               cursor: "pointer",
             }}
+            onClick={toggleMenu}
           />
           <Logo
             src={JTubeLogo}
@@ -77,12 +107,7 @@ export const Header = () => {
           />
         </Semi>
         <Semi2>
-          <Input
-            type="text"
-            value={searchText}
-            onChange={handleInputChange}
-            placeholder="Please enter a search term"
-          />
+          <Input type="text" placeholder="Please enter a search term" />
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
             style={{
@@ -93,36 +118,8 @@ export const Header = () => {
             }}
           />
         </Semi2>
-        <Semi3>
-          <FontAwesomeIcon
-            icon={faSquarePlus}
-            style={{
-              marginRight: "15px",
-              color: "#333",
-              fontSize: "24px",
-              cursor: "pointer",
-            }}
-          />
-          <FontAwesomeIcon
-            icon={faBell}
-            style={{
-              marginRight: "15px",
-              color: "#333",
-              fontSize: "24px",
-              cursor: "pointer",
-            }}
-          />
-          <FontAwesomeIcon
-            icon={faUser}
-            style={{
-              marginRight: "15px",
-              color: "#333",
-              fontSize: "24px",
-              cursor: "pointer",
-            }}
-          />
-        </Semi3>
       </Container>
+      <Menu isOpen={showMenu}>Menu content here</Menu>
     </Wrap>
   );
 };
