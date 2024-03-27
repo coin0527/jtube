@@ -20,7 +20,7 @@ export const slideOutMenu = keyframes`
 
 export const Menu = styled.div`
   position: fixed;
-  top: 70px;
+  top: 60px;
   left: 0;
   bottom: 0;
   width: 250px;

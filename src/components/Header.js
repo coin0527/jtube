@@ -6,14 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faBarsStaggered,
+  faBell,
   faFire,
   faGamepad,
+  faGear,
   faGraduationCap,
   faHeart,
   faHome,
   faMagnifyingGlass,
   faMusic,
   faPersonSkating,
+  faUser,
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -72,6 +75,13 @@ const Semi2 = styled.div`
   display: flex;
   align-items: center;
   height: 30px;
+`;
+
+const Options = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 25px;
 `;
 
 export const Header = () => {
@@ -148,7 +158,16 @@ export const Header = () => {
           구독
         </Subscript>
         <Line />
-        <h3 style={{ marginLeft: "15px" }}>장르</h3>
+        <h3
+          style={{
+            marginLeft: "15px",
+            fontSize: "20px",
+            fontWeight: "600",
+            marginBottom: "20px",
+          }}
+        >
+          장르
+        </h3>
         <Popular>
           <FontAwesomeIcon
             icon={faFire}
@@ -175,7 +194,7 @@ export const Header = () => {
           <FontAwesomeIcon
             icon={faMusic}
             style={{
-              marginRight: "20px",
+              marginRight: "18px",
               fontSize: "18px",
               marginLeft: "20px",
             }}
@@ -186,7 +205,7 @@ export const Header = () => {
           <FontAwesomeIcon
             icon={faVideo}
             style={{
-              marginRight: "20px",
+              marginRight: "15px",
               fontSize: "18px",
               marginLeft: "20px",
             }}
@@ -197,7 +216,7 @@ export const Header = () => {
           <FontAwesomeIcon
             icon={faBarsStaggered}
             style={{
-              marginRight: "20px",
+              marginRight: "18px",
               fontSize: "18px",
               marginLeft: "20px",
             }}
@@ -208,7 +227,7 @@ export const Header = () => {
           <FontAwesomeIcon
             icon={faGamepad}
             style={{
-              marginRight: "20px",
+              marginRight: "14px",
               fontSize: "18px",
               marginLeft: "20px",
             }}
@@ -230,7 +249,7 @@ export const Header = () => {
           <FontAwesomeIcon
             icon={faGraduationCap}
             style={{
-              marginRight: "20px",
+              marginRight: "14px",
               fontSize: "18px",
               marginLeft: "20px",
             }}
@@ -249,6 +268,15 @@ export const Header = () => {
           팟캐스트
         </Pot>
         <Line />
+
+        <Options>
+          <FontAwesomeIcon icon={faUser} style={{ cursor: "pointer" }} />
+          <FontAwesomeIcon icon={faBell} style={{ cursor: "pointer" }} />
+          <FontAwesomeIcon icon={faGear} style={{ cursor: "pointer" }} />
+        </Options>
+        <h5 style={{ textAlign: "center", fontSize: "15px" }}>
+          &copy; 2024. JTube. All rights reserved.
+        </h5>
       </Menu>
     </Wrap>
   );
