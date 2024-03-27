@@ -119,7 +119,7 @@ export const Header = () => {
           />
         </Semi2>
       </Container>
-      <Menu isOpen={showMenu}>Menu content here</Menu>
+      <Menu isOpen={showMenu}>메뉴 추가예정</Menu>
     </Wrap>
   );
 };
