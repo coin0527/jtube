@@ -42,48 +42,108 @@ export const Menu = styled.div`
 export const Home = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Shorts = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Subscript = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Popular = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Shop = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Music = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Movie = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Live = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Game = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Sports = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Study = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;
 export const Pot = styled.div`
   margin-bottom: 15px;
   cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
 `;

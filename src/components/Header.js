@@ -148,6 +148,7 @@ export const Header = () => {
           구독
         </Subscript>
         <Line />
+        <h3 style={{ marginLeft: "15px" }}>장르</h3>
         <Popular>
           <FontAwesomeIcon
             icon={faFire}
