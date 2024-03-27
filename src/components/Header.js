@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import styled, { css, keyframes } from "styled-components";
-import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faHeart,
+  faHome,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import JTubeLogo from "../Img/Jtube_01.png";
+import { Line } from "./Line";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Wrap = styled.div`
   padding: 15px 3%;
@@ -65,6 +72,7 @@ const Menu = styled.div`
   left: 0;
   bottom: 0;
   width: 250px;
+  padding: 30px 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   animation-duration: 0.3s;
@@ -78,6 +86,18 @@ const Menu = styled.div`
       : css`
           animation-name: ${slideOutMenu};
         `}
+`;
+const Home = styled.div`
+  margin-bottom: 15px;
+  cursor: pointer;
+`;
+const Shorts = styled.div`
+  margin-bottom: 15px;
+  cursor: pointer;
+`;
+const Subscript = styled.div`
+  margin-bottom: 15px;
+  cursor: pointer;
 `;
 
 export const Header = () => {
@@ -119,7 +139,42 @@ export const Header = () => {
           />
         </Semi2>
       </Container>
-      <Menu isOpen={showMenu}>메뉴 추가예정</Menu>
+      <Menu isOpen={showMenu}>
+        <Home>
+          <FontAwesomeIcon
+            icon={faHome}
+            style={{
+              marginRight: "20px",
+              marginLeft: "20px",
+              fontSize: "18px",
+            }}
+          />
+          홈
+        </Home>
+        <Shorts>
+          <FontAwesomeIcon
+            icon={faYoutube}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          Shorts
+        </Shorts>
+        <Subscript>
+          <FontAwesomeIcon
+            icon={faHeart}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          구독
+        </Subscript>
+        <Line />
+      </Menu>
     </Wrap>
   );
 };
