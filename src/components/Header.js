@@ -1,15 +1,41 @@
 import React, { useState } from "react";
-import styled, { css, keyframes } from "styled-components";
+import { Line } from "./Line";
+import styled from "styled-components";
+import JTubeLogo from "../Img/Jtube_01.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
+  faBarsStaggered,
+  faFire,
+  faGamepad,
+  faGraduationCap,
   faHeart,
   faHome,
   faMagnifyingGlass,
+  faMusic,
+  faPersonSkating,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import JTubeLogo from "../Img/Jtube_01.png";
-import { Line } from "./Line";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import {
+  faShopify,
+  faSpotify,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  Menu,
+  Home,
+  Shorts,
+  Subscript,
+  Popular,
+  Shop,
+  Music,
+  Movie,
+  Live,
+  Game,
+  Sports,
+  Study,
+  Pot,
+} from "../css/Menucss";
 
 const Wrap = styled.div`
   padding: 15px 3%;
@@ -46,58 +72,6 @@ const Semi2 = styled.div`
   display: flex;
   align-items: center;
   height: 30px;
-`;
-
-const slideInMenu = keyframes`
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-`;
-
-const slideOutMenu = keyframes`
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-`;
-
-const Menu = styled.div`
-  position: fixed;
-  top: 70px;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  padding: 30px 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  animation-duration: 0.3s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  ${({ isOpen }) =>
-    isOpen
-      ? css`
-          animation-name: ${slideInMenu};
-        `
-      : css`
-          animation-name: ${slideOutMenu};
-        `}
-`;
-const Home = styled.div`
-  margin-bottom: 15px;
-  cursor: pointer;
-`;
-const Shorts = styled.div`
-  margin-bottom: 15px;
-  cursor: pointer;
-`;
-const Subscript = styled.div`
-  margin-bottom: 15px;
-  cursor: pointer;
 `;
 
 export const Header = () => {
@@ -173,6 +147,106 @@ export const Header = () => {
           />
           구독
         </Subscript>
+        <Line />
+        <Popular>
+          <FontAwesomeIcon
+            icon={faFire}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          인기
+        </Popular>
+        <Shop>
+          <FontAwesomeIcon
+            icon={faShopify}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          쇼핑
+        </Shop>
+        <Music>
+          <FontAwesomeIcon
+            icon={faMusic}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          음악
+        </Music>
+        <Movie>
+          <FontAwesomeIcon
+            icon={faVideo}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          영화
+        </Movie>
+        <Live>
+          <FontAwesomeIcon
+            icon={faBarsStaggered}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          생방송
+        </Live>
+        <Game>
+          <FontAwesomeIcon
+            icon={faGamepad}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          게임
+        </Game>
+        <Sports>
+          <FontAwesomeIcon
+            icon={faPersonSkating}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          스포츠
+        </Sports>
+        <Study>
+          <FontAwesomeIcon
+            icon={faGraduationCap}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          학습
+        </Study>
+        <Pot>
+          <FontAwesomeIcon
+            icon={faSpotify}
+            style={{
+              marginRight: "20px",
+              fontSize: "18px",
+              marginLeft: "20px",
+            }}
+          />
+          팟캐스트
+        </Pot>
         <Line />
       </Menu>
     </Wrap>
