@@ -25,7 +25,6 @@ const IconWrapper = styled.div`
   .icon {
     font-size: inherit;
   }
-
   @media screen and (max-width: 768px) {
     .icon {
       font-size: 100px;
