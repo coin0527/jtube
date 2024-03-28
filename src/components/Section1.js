@@ -1,3 +1,5 @@
+import { faSackDollar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 const Wrap = styled.div`
@@ -19,11 +21,26 @@ const Container = styled.div`
   padding: 150px 5%;
 `;
 
+const IconWrapper = styled.div`
+  .icon {
+    font-size: inherit;
+  }
+
+  @media screen and (max-width: 768px) {
+    .icon {
+      font-size: 100px;
+    }
+  }
+`;
+
 export const Section1 = () => {
   return (
     <Wrap>
       <Container>
         <Box1 />
+        <IconWrapper>
+          <FontAwesomeIcon icon={faSackDollar} className="icon" />
+        </IconWrapper>
       </Container>
     </Wrap>
   );
