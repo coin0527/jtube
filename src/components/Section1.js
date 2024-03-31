@@ -32,6 +32,7 @@ const IconWrapper = styled.div`
   }
 `;
 
+//css 따로
 export const Section1 = () => {
   return (
     <Wrap>
