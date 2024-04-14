@@ -40,6 +40,7 @@ export const Section1 = () => {
         <IconWrapper>
           <FontAwesomeIcon icon={faSackDollar} className="icon" />
         </IconWrapper>
+        {/* in */}
       </Container>
     </Wrap>
   );
