@@ -42,6 +42,7 @@ export const Section1 = () => {
         </IconWrapper>
         {/* in */}
       </Container>
+      {/* out */}
     </Wrap>
   );
 };
