@@ -1,7 +1,7 @@
 import { faSackDollar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-//css darang
+//css darang sul
 const Wrap = styled.div`
   width: 100%;
   height: 80vh;
