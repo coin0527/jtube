@@ -1,5 +1,3 @@
-import { faSackDollar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 //css darang sul
 const Wrap = styled.div`
@@ -37,9 +35,7 @@ export const Section1 = () => {
     <Wrap>
       <Container>
         <Box1 />
-        <IconWrapper>
-          <FontAwesomeIcon icon={faSackDollar} className="icon" />
-        </IconWrapper>
+        <IconWrapper></IconWrapper>
       </Container>
     </Wrap>
   );
