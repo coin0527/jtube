@@ -39,6 +39,7 @@ import {
   Study,
   Pot,
 } from "../css/Menucss";
+import { Link } from "react-router-dom";
 
 const Wrap = styled.div`
   padding: 15px 3%;
@@ -104,11 +105,13 @@ export const Header = () => {
             }}
             onClick={toggleMenu}
           />
-          <Logo
-            src={JTubeLogo}
-            alt="JTube Logo"
-            style={{ cursor: "pointer" }}
-          />
+          <Link to="/">
+            <Logo
+              src={JTubeLogo}
+              alt="JTube Logo"
+              style={{ cursor: "pointer" }}
+            />
+          </Link>
         </Semi>
         <Semi2>
           <Input type="text" placeholder="Please enter a search term" />
@@ -125,37 +128,43 @@ export const Header = () => {
       </Container>
       <Menu isOpen={showMenu}>
         <Home>
-          <FontAwesomeIcon
-            icon={faHome}
-            style={{
-              marginRight: "20px",
-              marginLeft: "20px",
-              fontSize: "18px",
-            }}
-          />
-          홈
+          <Link to="/">
+            <FontAwesomeIcon
+              icon={faHome}
+              style={{
+                marginRight: "20px",
+                marginLeft: "20px",
+                fontSize: "18px",
+              }}
+            />
+            홈
+          </Link>
         </Home>
         <Shorts>
-          <FontAwesomeIcon
-            icon={faYoutube}
-            style={{
-              marginRight: "20px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          Shorts
+          <Link to="/shorts">
+            <FontAwesomeIcon
+              icon={faYoutube}
+              style={{
+                marginRight: "20px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            Shorts
+          </Link>
         </Shorts>
         <Subscript>
-          <FontAwesomeIcon
-            icon={faHeart}
-            style={{
-              marginRight: "20px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          구독
+          <Link to="/subscribe">
+            <FontAwesomeIcon
+              icon={faHeart}
+              style={{
+                marginRight: "20px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            구독
+          </Link>
         </Subscript>
         <Line />
         <h3
@@ -169,110 +178,133 @@ export const Header = () => {
           장르
         </h3>
         <Popular>
-          <FontAwesomeIcon
-            icon={faFire}
-            style={{
-              marginRight: "20px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          인기
+          <Link to="/popular">
+            <FontAwesomeIcon
+              icon={faFire}
+              style={{
+                marginRight: "20px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            인기
+          </Link>
         </Popular>
         <Shop>
-          <FontAwesomeIcon
-            icon={faShopify}
-            style={{
-              marginRight: "20px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          쇼핑
+          <Link to="/shopping">
+            <FontAwesomeIcon
+              icon={faShopify}
+              style={{
+                marginRight: "20px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            쇼핑
+          </Link>
         </Shop>
         <Music>
-          <FontAwesomeIcon
-            icon={faMusic}
-            style={{
-              marginRight: "18px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          음악
+          <Link to="/music">
+            <FontAwesomeIcon
+              icon={faMusic}
+              style={{
+                marginRight: "18px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            음악
+          </Link>
         </Music>
         <Movie>
-          <FontAwesomeIcon
-            icon={faVideo}
-            style={{
-              marginRight: "15px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          영화
+          <Link to="/movie">
+            <FontAwesomeIcon
+              icon={faVideo}
+              style={{
+                marginRight: "15px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            영화
+          </Link>
         </Movie>
         <Live>
-          <FontAwesomeIcon
-            icon={faBarsStaggered}
-            style={{
-              marginRight: "18px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          생방송
+          <Link to="/live">
+            <FontAwesomeIcon
+              icon={faBarsStaggered}
+              style={{
+                marginRight: "18px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            생방송
+          </Link>
         </Live>
         <Game>
-          <FontAwesomeIcon
-            icon={faGamepad}
-            style={{
-              marginRight: "14px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          게임
+          <Link to="/game">
+            <FontAwesomeIcon
+              icon={faGamepad}
+              style={{
+                marginRight: "14px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            게임
+          </Link>
         </Game>
         <Sports>
-          <FontAwesomeIcon
-            icon={faPersonSkating}
-            style={{
-              marginRight: "20px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          스포츠
+          <Link to="/sports">
+            <FontAwesomeIcon
+              icon={faPersonSkating}
+              style={{
+                marginRight: "20px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            스포츠
+          </Link>
         </Sports>
         <Study>
-          <FontAwesomeIcon
-            icon={faGraduationCap}
-            style={{
-              marginRight: "14px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          학습
+          <Link to="/study">
+            <FontAwesomeIcon
+              icon={faGraduationCap}
+              style={{
+                marginRight: "14px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            학습
+          </Link>
         </Study>
         <Pot>
-          <FontAwesomeIcon
-            icon={faSpotify}
-            style={{
-              marginRight: "20px",
-              fontSize: "18px",
-              marginLeft: "20px",
-            }}
-          />
-          팟캐스트
+          <Link to="/">
+            <FontAwesomeIcon
+              icon={faSpotify}
+              style={{
+                marginRight: "20px",
+                fontSize: "18px",
+                marginLeft: "20px",
+              }}
+            />
+            팟캐스트
+          </Link>
         </Pot>
         <Line />
-
         <Options>
-          <FontAwesomeIcon icon={faUser} style={{ cursor: "pointer" }} />
-          <FontAwesomeIcon icon={faBell} style={{ cursor: "pointer" }} />
-          <FontAwesomeIcon icon={faGear} style={{ cursor: "pointer" }} />
+          <Link to="/user">
+            <FontAwesomeIcon icon={faUser} style={{ cursor: "pointer" }} />
+          </Link>
+          <Link to="/bell">
+            <FontAwesomeIcon icon={faBell} style={{ cursor: "pointer" }} />
+          </Link>
+          <Link to="/setting">
+            <FontAwesomeIcon icon={faGear} style={{ cursor: "pointer" }} />
+          </Link>
         </Options>
         <h5 style={{ textAlign: "center", fontSize: "15px" }}>
           &copy; 2024. JTube. All rights reserved.
