@@ -11,9 +11,7 @@ const Wrap = styled.div`
 export const Home = () => {
   return (
     <Wrap>
-      <Header />
       <Section1 />
-      <Footer />
     </Wrap>
   );
 };
