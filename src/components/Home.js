@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { Header } from "./Header";
 import { Section1 } from "./Section1";
-import { Footer } from "./Footer";
 
 const Wrap = styled.div`
   width: 100%;
